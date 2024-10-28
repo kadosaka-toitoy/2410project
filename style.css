@@ -56,7 +56,6 @@
   }
   .right {
     flex: 1 120px;
-    background-color: red;
     overflow: hidden;
   }
   .firstviewimage {
@@ -174,7 +173,7 @@
 
   .recruit-section {
     text-align: center;
-    width: 1150px;
+    width: 80%;
     margin: 0 auto;
   }
   .recruit-subtitle {
@@ -193,12 +192,12 @@
   }
   .recruit-itemarea {
     display: flex;
-    gap: 50px;
+    gap: 5%;
     justify-content: center;
   }
   .recruit-item {
     background-color: gray;
-    width: 350px;
+    width: 30%;
     margin: 0px 0px;
     padding: 0px;
     display: flex;
@@ -217,7 +216,6 @@
   .recruit-links li {
     list-style-type: none;
     text-align: justify;
-
   }
   .recruit-links-text {
     display: flex;
@@ -225,11 +223,13 @@
   .recruit-links-komoku {
     text-align: left;
     width: 100px;
-    margin: 0px 0px 5px 30px;
+    margin: 0% 0% 5px 10%;
   }
   .recruit-links-info {
     text-align: left;
-    width: 190px;
+    margin: 0% 0% 5px 0%;
+    width: calc(100% - 105px);
+    padding: 0 10% 0 0;
   }
   .recruit-links-more {
     display: flex;
