@@ -9,6 +9,9 @@
     background-color: white;
     line-height: 1.6;
   }
+
+/* ファーストビュー */
+
   .first-view {
     display: flex;
     height: 100vh;
@@ -16,30 +19,32 @@
   }
   .left {
     flex: 1;
-    padding: 20px;
+    padding: 40px 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .icon-circle {
+    position: fixed;
     display: flex; /* フレックスボックスを使用 */
     justify-content: center; /* 横方向の中央揃え */
     align-items: center; /* 縦方向の中央揃え */
     background-color: yellow;
     color: black;
     border-radius: 50%; /* 正円にする */
-    padding: 10px;
+    padding: 0;
     font-size: 18px;
     font-weight: 700;
-    width: 120px;
-    height: 120px;
+    width: 30vw;
+    height: 30vh;
+    max-width: 120px;
+    max-height: 120px;
     margin-top: 10px;
+    aspect-ratio: 1;
 }
-  .company-logo {
-    background-color: red;
-    height: 50px;
-    width: 100%;
-    margin: 20px 0;
+  .logo {
+    width: 90%;
+    margin-top: 45vh;
   }
   .menu {
     list-style: none;
@@ -50,17 +55,26 @@
     font-size: 18px;
   }
   .right {
-    flex: 1;
+    flex: 1 120px;
     background-color: red;
-    object-fit: cover;
+    overflow: hidden;
   }
+  .firstviewimage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+/* セクションボーダーシンボル */
+
   .section-symbol {
-    background-color: red;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    margin: 70px auto;
+    margin: 100px auto 100px calc(50vw - 25px);
   }
+
+/* ニュース */
+
   .section-title {
     text-align: center;
     font-size: 24px;
@@ -68,14 +82,14 @@
   }
   .news-item {
     display: flex;
-    width: 600px;
+    width: 650px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
   }
   .news-date, .news-type, .news-title {
-    margin-right: 15px;
+    margin-right: 25px;
   }
   .news-type {
     background-color: gray;
@@ -83,27 +97,32 @@
     padding: 0 20px;
   }
   .news-arrow {
+    display: flex;
     background-color: gray;
     color: white;
     font-size: 15px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin: 0 0 0 auto;
   }
   .news-hr {
-    width: 700px;
+    width: 750px;
     margin: 15px auto;
   }
+
+/* アバウトアス */
+
   .us-section {
-    background-color: ;
-    height: 850px;
+    background-color: none;
+    height: 810px;
   }
   .us-content {
-    background-color: ;
     width: 600px;
-    margin: 70px auto 0 50px;
+    margin: 50px auto 0 50px;
     text-align: center;
     float: left;
   }
@@ -112,24 +131,24 @@
     margin-bottom: 20px;
   }
   .side-image1 {
-    background-color: red;
     width: calc(50% - 350px);
     height: calc(100% - 159px);
     top: 0;
     left: 0;
     float: left;
+    object-fit: cover;
   }
   .side-image2 {
-    background-color: red;
     width: calc(50% - 350px);
     height: calc(100% - 159px);
     top: 0;
     right: 0;
     margin-left: 50px;
     float: left;
+    object-fit: cover;
   }
   .us-sublinks {
-    background-color: ;
+    background-color: none;
     width: 100%;
     padding-top: 50px;
     display: flex; /* 横並びにする */
@@ -150,12 +169,15 @@
     height: auto;
     width: 250px;
   }
+
+/* リクルート */
+
   .recruit-section {
     text-align: center;
-    padding: 0 40px 20px 40px;
+    width: 1150px;
+    margin: 0 auto;
   }
   .recruit-subtitle {
-    background-color: ;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -171,11 +193,12 @@
   }
   .recruit-itemarea {
     display: flex;
-    gap: 30px;
+    gap: 50px;
+    justify-content: center;
   }
   .recruit-item {
     background-color: gray;
-    width: 100%;
+    width: 350px;
     margin: 0px 0px;
     padding: 0px;
     display: flex;
@@ -185,53 +208,61 @@
     background-color: lightgray;
     width: 100%;
   }
+  .recruit-links-thumbnail {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
   .recruit-links li {
     list-style-type: none;
-    margin-bottom: 5px;
-  }
-  .recruit-links-thumbnail {
-    background-color: red;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 15px;
+    text-align: justify;
+
   }
   .recruit-links-text {
     display: flex;
   }
   .recruit-links-komoku {
-    background-color: ;
     text-align: left;
-    width: 35%;
+    width: 100px;
+    margin: 0px 0px 5px 30px;
   }
   .recruit-links-info {
-    background-color: ;
     text-align: left;
-    width: 65%;
+    width: 190px;
   }
   .recruit-links-more {
+    display: flex;
     background-color: gray;
     color: white;
-    margin: 5% 20%;
+    width: 200px;
+    height: 30px;
+    margin: 5% auto;
+    justify-content: center;
+    align-items: center;
   }
   .recruit-oueworks {
     background-color: gray;
     color: white;
-    margin: 70px auto 90px auto;
+    margin: 70px auto 150px auto;
     text-align: center;
     height: auto;
     width: 250px;
   }
+
+  /* フッター */
+
   .footer {
     background-color: black;
     width: 100%;
-    height: 200px;
-    padding: 80px 0 80px 50px;
+    height: 300px;
+    padding: 60px;
     text-align: left;
     color: white;
   }
   .footer-logo {
-    background-color: red;
-    width: 150px;
-    height: 40px;
+    width: auto;
+    height: 60px;
+    margin-top: 60px;
   }
   
