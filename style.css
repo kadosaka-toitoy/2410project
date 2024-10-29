@@ -424,6 +424,9 @@
 
   /* U-BONEXのものづくり */
 
+  .section-monodukuri {
+    padding-top: 100px;
+  }
   .monodukuri {
     width: 800px;
     margin: 0px auto;
@@ -448,6 +451,9 @@
 
   /* ジュエリーができるまで */
 
+  .section-howmade {
+    padding-top: 100px;
+  }
   .howmade {
     width: 800px;
     margin: 0px auto;
@@ -540,6 +546,9 @@
 
   /* U-BONEXが扱う素材 */
 
+  .section-material {
+    padding-top: 100px;
+  }
   .material {
     width: 800px;
     margin: 0px auto;
