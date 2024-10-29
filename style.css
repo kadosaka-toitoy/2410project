@@ -2,12 +2,22 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
   body {
     font-family: Arial, sans-serif;
     color: black;
     background-color: white;
     line-height: 1.6;
+  }
+
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover{
+    opacity: 0.5; 
   }
 
 /* ファーストビュー */
@@ -19,7 +29,7 @@
   }
   .left {
     flex: 1;
-    padding: 40px 60px;
+    padding: 40px 60px 40px 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,6 +51,7 @@
     max-height: 120px;
     margin-top: 10px;
     aspect-ratio: 1;
+    z-index: 2;
 }
   .logo {
     width: 90%;
@@ -69,23 +80,29 @@
   .section-symbol {
     width: 50px;
     height: 50px;
-    margin: 100px auto 100px calc(50vw - 25px);
+    margin: 100px auto 0px calc(50vw - 25px);
   }
 
 /* ニュース */
 
+  #news {
+    padding-top: 100px;
+  }
   .section-title {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
   }
   .news-item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    font-size: 14px;
+  }
+  .news-item-area {
     display: flex;
     width: 650px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 14px;
   }
   .news-date, .news-type, .news-title {
     margin-right: 25px;
@@ -115,9 +132,11 @@
 
 /* アバウトアス */
 
+  #us-section {
+    padding-top: 100px;
+}
   .us-section {
-    background-color: none;
-    height: 810px;
+    height: 900px;
   }
   .us-content {
     width: 600px;
@@ -147,7 +166,6 @@
     object-fit: cover;
   }
   .us-sublinks {
-    background-color: none;
     width: 100%;
     padding-top: 50px;
     display: flex; /* 横並びにする */
@@ -171,6 +189,9 @@
 
 /* リクルート */
 
+  #recruit-section {
+    padding-top: 100px;
+  }
   .recruit-section {
     text-align: center;
     width: 80%;
@@ -192,12 +213,12 @@
   }
   .recruit-itemarea {
     display: flex;
-    gap: 5%;
+    gap: 2%;
     justify-content: center;
   }
   .recruit-item {
     background-color: gray;
-    width: 30%;
+    width: 32%;
     margin: 0px 0px;
     padding: 0px;
     display: flex;
@@ -209,11 +230,12 @@
   }
   .recruit-links-thumbnail {
     width: 100%;
-    height: 130px;
+    height: 160px;
     margin-bottom: 15px;
     object-fit: cover;
   }
   .recruit-links li {
+    margin-bottom: 5px;
     list-style-type: none;
     text-align: justify;
   }
@@ -223,31 +245,40 @@
   .recruit-links-komoku {
     text-align: left;
     width: 100px;
-    margin: 0% 0% 5px 10%;
+    margin: 0% 0% 5px 6%;
   }
   .recruit-links-info {
     text-align: left;
     margin: 0% 0% 5px 0%;
-    width: calc(100% - 105px);
+    width: calc(100% - 100px);
     padding: 0 10% 0 0;
   }
   .recruit-links-more {
     display: flex;
-    background-color: gray;
-    color: white;
-    width: 200px;
-    height: 30px;
     margin: 5% auto;
     justify-content: center;
     align-items: center;
   }
-  .recruit-oueworks {
+  .recruit-links-more-links {
     background-color: gray;
     color: white;
-    margin: 70px auto 150px auto;
+    width: 200px;
+    height: 30px;
+    padding: 3px;
+    margin: 5% auto;
+  }
+  .recruit-ourworks {
+    margin: 70px auto 0px auto;
+    width: 250px;
+  }
+  .recruit-ourworks-links {
+    background-color: gray;
+    color: white;
     text-align: center;
     height: auto;
-    width: 250px;
+  }
+  .recruit-ourworks a {
+    display: block;
   }
 
   /* フッター */
@@ -257,6 +288,7 @@
     width: 100%;
     height: 300px;
     padding: 60px;
+    margin-top: 150px;
     text-align: left;
     color: white;
   }
@@ -265,4 +297,267 @@
     height: 60px;
     margin-top: 60px;
   }
+
+
+
+
+  /* サブページ */
+
+
+
+
+
+  /* ヘッダー */
+
+  .header {
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    padding: 25px 0px 0px 60px;
+    margin: 0px 0px 90px 0px;
+    text-align: left;
+    color: white;
+  }
+  .u-bonex_headerlogo {
+    width: auto;
+    height: 50px;
+  }
+
+
+
+
+
+  /* 会社概要 */
+
+  .companyprofile {
+    width: 800px;
+    margin: 40px auto 0px auto;
+  }
+  .companyprofile_table {
+    width: 100%;
+    border-collapse: separate; /* セルの境界を重ならせない */
+    border-top: 2px solid #d2d2d2; /* テーブルの上部に水平線を追加 */
+  }
+  .companyprofile_table td {
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #d2d2d2; /* 水平線のみ */
+    padding: 20px 40px;
+  }
+  .col1 {
+    font-weight: normal; /* 細字 */
+  }
+  .col2 {
+    font-weight: bold; /* 太字 */
+  }
+  .col2_access {
+    display: flex;
+    font-weight: bold; /* 太字 */
+  }
+  .col2_access_link {
+    display: flex;
+    margin: auto 0px auto auto;
+  }
+  .col2_access_arrow {
+    margin-right: 10px;
+    display: flex;
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .col2_subtext {
+    font-weight: normal; /* 細字 */
+  }
+
+  /* 沿革 */
+
+  .section-enkaku {
+    padding-top: 100px;
+  }
+  .enkaku_table {
+    width: 800px;
+    border-collapse: collapse;
+    margin: 50px auto 0px auto;
+  }
+  th, td {
+    border: 1px solid #333; /* 細い1本線 */
+    padding: 8px;
+    text-align: left;
+  }
+  .col3 {
+    background-color: #f0f0f0; /* 1列目の薄いグレー */
+    width: 120px;
+  }
+
+  /* アクセス */
+
+  #access-section {
+    padding-top: 100px;
+  }
+  .map {
+    background-color: red;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto 110px auto;
+  }
+
+
+
+
+
+  /* our works -ジュエリーができるまで */
   
+  /* our works -U-BONEXの技術-*/
+
+  .ourworks {
+    background-color: red;
+    width: 800px;
+    height: 450px;
+    margin: 40px auto 0px auto;
+  }
+
+  /* U-BONEXのものづくり */
+
+  .monodukuri {
+    width: 800px;
+    margin: 0px auto;
+  }
+  .monodukuri_images {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;  /* 各円を均等に配置 */
+    align-items: center;   /* 中央に揃える */
+  }
+  .monodukuri_circle {
+    width: 19%;                /* 円の横幅 */
+    aspect-ratio: 1 / 1;         /* 縦横比を1:1に設定 */
+    background-color: red;   /* 色 */
+    border-radius: 50%;   /* 丸めて正円に */ 
+}
+  .monodukuri_text {
+    width: 600px;
+    margin: 40px auto 0px auto;
+    text-align: center;
+}
+
+  /* ジュエリーができるまで */
+
+  .howmade {
+    width: 800px;
+    margin: 0px auto;
+  }
+  .howmade_chart {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(800px * 0.12);
+  }
+  .howmade_chart hr {
+    position: relative;
+    background-color: gray;
+    width: 90%;
+    height: 5px;
+    margin: auto;
+  }
+  .howmade_chart_circle {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;  /* 各円を均等に配置 */
+    align-items: center;   /* 中央に揃える */
+  }
+  .howmade_chart_circlechild {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    width: 12%;                /* 円の横幅 */
+    aspect-ratio: 1 / 1;         /* 縦横比を1:1に設定 */
+    background-color: #9fd5fa;   /* 色 */
+    border-radius: 50%;   /* 丸めて正円に */ 
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .howmade_chart_circlechild_finishing {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    width: 12%;                /* 円の横幅 */
+    aspect-ratio: 1 / 1;         /* 縦横比を1:1に設定 */
+    background-color: #9fd5fa;   /* 色 */
+    border-radius: 50%;   /* 丸めて正円に */ 
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .howmade_text {
+    width: 600px;
+    margin: 40px auto 90px auto;
+    text-align: center;
+  }
+  .howmade_part {
+    width: 800px;
+    margin: 0px auto;
+  }
+  .howmade_part_colum {
+    width: 100%;
+    height: 168px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  .howmade_part_video {
+    background-color: red;
+    width: 300px;
+    height: 100%;
+  }
+  .howmade_part_text {
+    width: 500px;
+    height: 100%;
+    text-align: justify;
+  }
+  .howmade_part_text hr {
+    height: 3px;
+    background-color: black;
+  }
+  .howmade_part_title {
+    width: 500px;
+    height: 50px;
+    padding: 10px 60px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .howmade_part_info {
+    width: 100%;
+    height: 115px;
+    padding: 10px 0px 0px 60px;
+  }
+
+  /* U-BONEXが扱う素材 */
+
+  .material {
+    width: 800px;
+    margin: 0px auto;
+  }
+  .material_images {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;  /* 各円を均等に配置 */
+    align-items: center;   /* 中央に揃える */
+  }
+  .material_circle {
+    width: 24%;                /* 円の横幅 */
+    aspect-ratio: 1 / 1;         /* 縦横比を1:1に設定 */
+    background-color: red;   /* 色 */
+    border-radius: 50%;   /* 丸めて正円に */ 
+}
+  .material_text {
+    width: 600px;
+    margin: 40px auto 0px auto;
+    text-align: center;
+}
