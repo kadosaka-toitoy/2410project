@@ -11,15 +11,17 @@
   <!-- ファーストビュー -->
   <section class="first-view">
     <div class="left">
-      <div class="icon-circle">採用情報</div>
+        <a href="#recruit-section">
+            <div class="icon-circle">採用情報</div>
+        </a>
       <img class="logo" src="images/241028_oldlogo.svg" alt="株式会社ユーボネクス">
       <ul class="menu">
-        <li>news -新着情報-</li>
-        <li>about us -ユーボネクスとは-</li>
-        <li>company profile -会社概要-</li>
-        <li>recruit -採用情報-</li>
-        <li>our works -ジュエリーができるまで-</li>
-        <li>contact -お問い合わせ-</li>
+        <li><a href="#news">news -新着情報-</a></li>
+        <li><a href="#us-section">about us -ユーボネクスとは-</a></li>
+        <li><a href="about.html">company profile -会社概要-</a></li>
+        <li><a href="#recruit-section">recruit -採用情報-</a></li>
+        <li><a href="works.html">our works -ジュエリーができるまで-</a></li>
+        <li><a href="">contact -お問い合わせ-</a></li>
       </ul>
     </div>
     <div class="right">
@@ -31,28 +33,40 @@
   <img class="section-symbol" src="images/241028_newlogo_symbol.svg" alt="u-bonex_logosymbol">
   
   <!-- Newsセクション -->
-  <section>
+  <section id="news">
     <div class="section-title">news -新着情報-</div>
     <hr class="news-hr">
     <div class="news-item">
-        <span class="news-date">2024.11.09</span>
-        <span class="news-type">お知らせ</span>
-        <span class="news-title">公式サイトをリニューアルしました</span>
-        <span class="news-arrow">＞</span>
+        <a href="">
+            <div class="news-item-area">
+                <span class="news-date">2024.11.09</span>
+                <span class="news-type">お知らせ</span>
+                <span class="news-title">公式サイトをリニューアルしました</span>
+                <span class="news-arrow">＞</span>
+            </div>
+        </a>
     </div>
     <hr class="news-hr">
     <div class="news-item">
-      <span class="news-date">2024.11.09</span>
-      <span class="news-type">お知らせ</span>
-      <span class="news-title">能作の新ジュエリーブランド「NS by nousaku」発表</span>
-      <span class="news-arrow">＞</span>
+        <a href="">
+            <div class="news-item-area">
+                <span class="news-date">2024.11.09</span>
+                <span class="news-type">お知らせ</span>
+                <span class="news-title">能作の新ジュエリーブランド「NS by nousaku」発表</span>
+                <span class="news-arrow">＞</span>
+            </div>
+        </a>
     </div>
     <hr class="news-hr">
     <div class="news-item">
-      <span class="news-date">2024.11.09</span>
-      <span class="news-type">採用情報</span>
-      <span class="news-title">U-BONEXで一緒にものづくりをする仲間を募集中</span>
-      <span class="news-arrow">＞</span>
+        <a href="">
+            <div class="news-item-area">
+                <span class="news-date">2024.11.09</span>
+                <span class="news-type">採用情報</span>
+                <span class="news-title">U-BONEXで一緒にものづくりをする仲間を募集中</span>
+                <span class="news-arrow">＞</span>
+            </div>
+        </a>
     </div>
     <hr class="news-hr">
   </section>
@@ -61,7 +75,7 @@
   <img class="section-symbol" src="images/241028_newlogo_symbol.svg" alt="u-bonex_logosymbol">
   
   <!-- Usセクション -->
-  <section class="us-section">
+  <section id="us-section" class="us-section">
     <div class="section-title">about us -ユーボネクスとは-</div>
     <img class="side-image1" style="left: 0;" src="images/us_left.png" alt="u-bonex_us_leftimage">
     <div class="us-content">
@@ -84,14 +98,18 @@
     </div>
     <img class="side-image2" style="right: 0;" src="images/us_right.png" alt="u-bonex_us_rightimage">
     <div class="us-sublinks">
-        <div class="us-ourworks">
-            our works<br>
-            -ジュエリーができるまで-
-        </div>
-        <div class="us-companyprofile">
-            company profile<br>
-            -会社概要-
-        </div>
+        <a href="works.html">
+            <div class="us-ourworks">
+                our works<br>
+                -ジュエリーができるまで-
+            </div>
+        </a>
+        <a href="about.html">
+            <div class="us-companyprofile">
+                company profile<br>
+                -会社概要-
+            </div>
+        </a>
     </div>
   </section>
 
@@ -99,7 +117,7 @@
   <img class="section-symbol" src="images/241028_newlogo_symbol.svg" alt="u-bonex_logosymbol">
   
   <!-- Recruitセクション -->
-  <section class="recruit-section">
+  <section id="recruit-section" class="recruit-section">
     <div class="section-title">recruit -採用情報-</div>
     <div class="recruit-subtitle">
         <hr class="recruit-hr">
@@ -131,7 +149,11 @@
                 </div>
             </div>
             <div class="recruit-links-more">
-                詳しくはこちら
+                <a href="">
+                    <div class="recruit-links-more-links">
+                        詳しくはこちら
+                    </div>
+                </a>
             </div>
         </div>
         </div>
@@ -159,7 +181,11 @@
                 </div>
             </div>
             <div class="recruit-links-more">
-                詳しくはこちら
+                <a href="">
+                    <div class="recruit-links-more-links">
+                        詳しくはこちら
+                    </div>
+                </a>
             </div>
             </div>
         </div>
@@ -187,14 +213,22 @@
                 </div>
             </div>
             <div class="recruit-links-more">
-                詳しくはこちら
+                <a href="">
+                    <div class="recruit-links-more-links">
+                        詳しくはこちら
+                    </div>
+                </a>
             </div>
-            </div>
+        </div>
         </div>
     </div>
-    <div class="recruit-oueworks">
-        our works<br>
-        -U-BONEXの技術-
+    <div class="recruit-ourworks">
+        <a href="works.html">
+            <div class="recruit-ourworks-links">
+                our works<br>
+                -U-BONEXの技術-
+            </div>
+        </a>
     </div>
   </section>
 
