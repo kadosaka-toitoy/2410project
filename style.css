@@ -57,6 +57,9 @@
     width: 90%;
     margin-top: 45vh;
   }
+  .logo_white {
+    display: none;
+  }
   .menu {
     list-style: none;
     margin-top: 20px;
@@ -93,6 +96,10 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .news-hr {
+    width: 750px;
+    margin: 15px auto;
+  }
   .news-item {
     margin-left: auto;
     margin-right: auto;
@@ -124,10 +131,6 @@
     height: 20px;
     border-radius: 50%;
     margin: 0 0 0 auto;
-  }
-  .news-hr {
-    width: 750px;
-    margin: 15px auto;
   }
 
 /* アバウトアス */
@@ -234,24 +237,18 @@
     margin-bottom: 15px;
     object-fit: cover;
   }
-  .recruit-links li {
-    margin-bottom: 5px;
-    list-style-type: none;
-    text-align: justify;
+  .recruit-links-info-table {
+    width: 95%;
+    margin: 0% 2.5% 5px 2.5%;
+    border-collapse: collapse;
+    border: none;
   }
-  .recruit-links-text {
-    display: flex;
+  .recruit-links-info-table td {
+    vertical-align: top;
+    border: none;
   }
-  .recruit-links-komoku {
-    text-align: left;
-    width: 100px;
-    margin: 0% 0% 5px 6%;
-  }
-  .recruit-links-info {
-    text-align: left;
-    margin: 0% 0% 5px 0%;
-    width: calc(100% - 100px);
-    padding: 0 10% 0 0;
+  .recruit-links-info-table .col1 {
+    width: 85px;
   }
   .recruit-links-more {
     display: flex;
@@ -292,6 +289,9 @@
     text-align: left;
     color: white;
   }
+  .footer a:hover {
+    opacity: 1;
+  }
   .footer-logo {
     width: auto;
     height: 60px;
@@ -317,6 +317,9 @@
     margin: 0px 0px 90px 0px;
     text-align: left;
     color: white;
+  }
+  .header a:hover {
+    opacity: 1;
   }
   .u-bonex_headerlogo {
     width: auto;
@@ -344,10 +347,10 @@
     border-bottom: 2px solid #d2d2d2; /* 水平線のみ */
     padding: 20px 40px;
   }
-  .col1 {
+  .companyprofile_table .col1 {
     font-weight: normal; /* 細字 */
   }
-  .col2 {
+  .companyprofile_table .col2 {
     font-weight: bold; /* 太字 */
   }
   .col2_access {
@@ -385,7 +388,7 @@
     border-collapse: collapse;
     margin: 50px auto 0px auto;
   }
-  th, td {
+  .enkaku_table th, td {
     border: 1px solid #333; /* 細い1本線 */
     padding: 8px;
     text-align: left;
@@ -401,7 +404,6 @@
     padding-top: 100px;
   }
   .map {
-    background-color: red;
     width: 800px;
     height: 400px;
     margin: 50px auto 110px auto;
@@ -569,4 +571,145 @@
     width: 600px;
     margin: 40px auto 0px auto;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* 幅960px以下のデバイス対応 */
+@media screen and (max-width: 960px) {
+
+
+
+
+
+
+
+
+
+
+/* ファーストビュー */
+
+  .left {
+    position: relative;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  .icon-circle {
+    position: fixed;
+    display: none; /* フレックスボックスを使用 */
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+    background-color: yellow;
+    color: black;
+    border-radius: 50%; /* 正円にする */
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    width: 30vw;
+    height: 30vh;
+    max-width: 120px;
+    max-height: 120px;
+    margin-top: 10px;
+    aspect-ratio: 1;
+    z-index: 2;
+}
+  .logo {
+    display: none;
+  }
+  .logo_white {
+    display: block;
+    width: 70%;
+    margin: auto 15%;
+  }
+  .menu {
+    display: none;
+    list-style: none;
+    margin-top: 20px;
+  }
+  .menu li {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .right {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    filter: brightness(30%); /* 画像の明るさを50%に設定して暗くする */
+  }
+  .firstviewimage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .recruit-links-more-links {
+    width: 100%;
+  }
+
+
+  
+
+
+}
+
+
+
+
+
+  /* 幅750px以下のデバイス対応 */
+@media screen and (max-width: 750px) {
+
+
+
+
+
+
+
+/* ニュース */
+
+  .news-hr {
+    width: 100vw;
+  }
+  .news-item {
+    width: 85%;
+  }
+  .news-item-area {
+    width: 100%;
+  }
+  .news-date, .news-type, .news-title {
+    white-space: nowrap;   /* テキストを1行に制限（オプション） */
+  }
+  .news-title {
+    overflow: hidden;      /* はみ出たテキストを非表示 */
+    white-space: nowrap;   /* テキストを1行に制限（オプション） */
+    text-overflow: ellipsis; /* はみ出た部分に「...」を追加（オプション） */
+    text-align: justify;
+  }
+
+/* アバウトアス */
+
+.us-section {
+  height: auto;
+}
+.side-image1, .side-image2 {
+  display: none;
+}
+.us-content {
+  width: 80%;
+  float: none;
+  margin: 50px auto 0px auto;
+}
+
+
 }
